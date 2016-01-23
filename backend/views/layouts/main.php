@@ -25,14 +25,7 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<?php 
-    if (Yii::$app->user->isGuest) {
-        //未登录
-    }else{
-        
-    }
-
-?>
+ 
 
 <?= $content?>
 <?php $this->endBody() ?>
