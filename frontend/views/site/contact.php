@@ -8,7 +8,8 @@
 // use yii\bootstrap\ActiveForm;
 // use yii\captcha\Captcha;
 use yii\helpers\Url;
-
+use yii\bootstrap\BootstrapAsset;
+$this->registerCssFile("/statics/style/style-894e3466.css", [BootstrapAsset::className()]);
 $this->title = '联系';
 $this->params['breadcrumbs'][] = $this->title;
 ?>

@@ -4,6 +4,8 @@
 
 // use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\bootstrap\BootstrapAsset;
+$this->registerCssFile("/statics/style/style-894e3466.css", [BootstrapAsset::className()]);
 $this->title = '工作';
 $this->params['breadcrumbs'][] = $this->title;
 ?>

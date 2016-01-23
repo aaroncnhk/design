@@ -1,8 +1,9 @@
 <?php
 use yii\helpers\Url;
-
+use yii\bootstrap\BootstrapAsset;
 /* @var $this yii\web\View */
 
+$this->registerCssFile("/statics/style/style-894e3466.css", [BootstrapAsset::className()]);
 $this->title = '象记首页';
 ?>
 <header class="jumbotron jumbotron-m-index">
