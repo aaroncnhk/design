@@ -2,10 +2,11 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
 use backend\assets\AppAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
+
+use yii\bootstrap\BootstrapAsset;
 // use yii\bootstrap\Nav;
 // use yii\bootstrap\NavBar;
 // use yii\widgets\Breadcrumbs;
@@ -25,6 +26,7 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+<?php if (!Yii::$app->user->isGuest) {?>
 <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -38,12 +40,12 @@ AppAsset::register($this);
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?= Url::to(['site/logout'])?>" data-method="post" tabindex="-1">「<?php echo Yii::$app->user->identity->username ;?>」退出登录</a></li>
+          <li>
+              <a href="<?= Url::to(['site/logout'])?>" data-method="post" tabindex="-1">「<?php echo Yii::$app->user->identity->username ;?>」退出登录</a></li>  
           </ul>
         </div>
       </div>
     </nav>
-
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
@@ -54,10 +56,8 @@ AppAsset::register($this);
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-<?= $content?>
-          
-          
-         
+        <?php }?>
+        <?= $content?>
         </div>
       </div>
     </div>
