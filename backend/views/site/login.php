@@ -11,27 +11,34 @@ $this->title = '登录';
 $this->registerCssFile("/statics/style/signin.css",[BootstrapAsset::className()]);
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="container">
+<body class="gray-bg">
 
-      <h2 class="form-signin-heading text-center">请登录你的账户</h2>
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
 
-      <div class="card card-signin">
-        <img class="img-circle profile-img" src="/statics/images/avatar.png" alt="">
-        
-        <?php $form = ActiveForm::begin(['class' => 'form-signin','id' => 'login-form']); ?>
-          <?= $form->field($model, 'username') ?>
-          <?= $form->field($model, 'password')->passwordInput() ?>
+                <h1 class="logo-name">H+</h1>
 
-          <?= Html::submitButton('登录', ['class' => 'btn btn-lg btn-primary btn-block', 'name' => 'login-button']) ?>
-          <div class="checkbox">
-            <a class="pull-right">忘记密码?</a>
-            <label>
-              <input type="checkbox" value="remember-me">记住我
-            </label>
-          </div>
+            </div>
+            <h3>欢迎使用 H+</h3>
 
-        <?php ActiveForm::end(); ?>
-      </div>
+            <form class="m-t" role="form" action="index.html">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="用户名" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="密码" required="">
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
 
-    </div> 
-    <!-- /container -->
+
+                <p class="text-muted text-center"> <a href="login.html#"><small>忘记密码了？</small></a> | <a href="register.html">注册一个新账号</a>
+                </p>
+
+            </form>
+        </div>
+    </div>
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
