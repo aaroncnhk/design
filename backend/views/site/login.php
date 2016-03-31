@@ -8,7 +8,6 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\BootstrapAsset;
 $this->title = '登录';
-$this->registerCssFile("/statics/style/signin.css",[BootstrapAsset::className()]);
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <body class="gray-bg">
@@ -17,28 +16,25 @@ $this->params['breadcrumbs'][] = $this->title;
         <div>
             <div>
 
-                <h1 class="logo-name">H+</h1>
+                <h1 class="logo-name">X+</h1>
 
             </div>
-            <h3>欢迎使用 H+</h3>
+            <h3>欢迎登录象记管理后台</h3>
 
-            <form class="m-t" role="form" action="index.html">
+            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="用户名" required="">
+                    <?= $form->field($model, 'username')->textInput(['placeholder'=>'用户名'])->label(false) ?>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="密码" required="">
+                    <?= $form->field($model, 'password')->passwordInput(['placeholder'=>'密码'])->label(false)  ?>
                 </div>
-                <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
+                <?= Html::submitButton('登录', ['class' => 'btn btn-primary block full-width m-b', 'name' => 'login-button']) ?>
 
 
                 <p class="text-muted text-center"> <a href="login.html#"><small>忘记密码了？</small></a> | <a href="register.html">注册一个新账号</a>
                 </p>
 
-            </form>
+            <?php ActiveForm::end(); ?>
         </div>
     </div>
-    <script src="js/jquery.min.js?v=2.1.4"></script>
-    <script src="js/bootstrap.min.js?v=3.3.6"></script>
-    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
 </body>

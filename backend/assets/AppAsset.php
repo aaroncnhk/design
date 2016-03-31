@@ -18,7 +18,6 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'statics/style/todc-bootstrap.min.css',
         'statics/style/font-awesome.min.css',
         'statics/style/animate.min.css',
         'statics/style/style.min.css',
