@@ -13,6 +13,7 @@ use yii\web\Controller;
  */
 class ArticleController extends Controller
 {
+    public $layout = 'body';
     /**
      * article controller
      * @return string
@@ -21,6 +22,10 @@ class ArticleController extends Controller
     {
         
         return $this->render('index');
+    }
+    
+    public function actionCategory(){
+        return $this->render('category');
     }
     
 }

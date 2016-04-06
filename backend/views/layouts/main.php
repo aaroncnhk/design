@@ -76,7 +76,7 @@ $this->registerJsFile('@web/statics/js/plugins/pace/pace.min.js',['depends'=>['b
                                 </a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="<?=Url::to(['article/index1'])?>">
+                                <a class="J_menuItem" href="<?=Url::to(['article/category'])?>">
                                                                                                     文章分类
                                 </a>
                             </li>
@@ -189,7 +189,7 @@ $this->registerJsFile('@web/statics/js/plugins/pace/pace.min.js',['depends'=>['b
                 </button>
                 <nav class="page-tabs J_menuTabs">
                     <div class="page-tabs-content">
-                        <a href="javascript:;" class="active J_menuTab" data-id="<?=Url::to(['site/index'])?>l">首页</a>
+                        <a href="javascript:;" class="active J_menuTab" data-id="<?=Url::to(['outline/index'])?>">首页</a>
                     </div>
                 </nav>
                 <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i>
@@ -211,7 +211,11 @@ $this->registerJsFile('@web/statics/js/plugins/pace/pace.min.js',['depends'=>['b
                 <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
             </div>
             <div class="row J_mainContent" id="content-main">
-                <?=$content?>
+            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="<?=Url::to(['outline/index'])?>" frameborder="0" data-id="<?=Url::to(['outline/index'])?>" seamless>
+            
+            <?php // $content?>
+            </iframe>
+                
             </div>
             <div class="footer">
                 <div class="pull-right">&copy; 2014-<?= date('Y')?> <a href="http://www.yiwn.net/" target="_blank">Yi Wan network</a>

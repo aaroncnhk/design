@@ -1,16 +1,15 @@
-<?php
-
+<?php 
 /* @var $this yii\web\View */
 use yii\bootstrap\BootstrapAsset;
 use yii\helpers\Url;
-use backend\assets\AppAsset;
-$this->title = '文章列表';
-AppAsset::register($this);
+$this->title = '系统概要';
 date_default_timezone_set("Asia/Shanghai");
 ?>
+
+
 <div class="ibox float-e-margins"> 
    <div class="ibox-title"> 
-    <h5>文章列表。。。</h5> 
+    <h5>系统概要信息</h5> 
     <div class="ibox-tools"> 
      <a class="collapse-link"> <i class="fa fa-chevron-up"></i> </a> 
      <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#"> <i class="fa fa-wrench"></i> </a> 
