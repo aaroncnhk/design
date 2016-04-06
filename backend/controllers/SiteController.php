@@ -61,7 +61,7 @@ class SiteController extends Controller
     public function actionLogin()
     {
         
-//         $this->layout = 'login.php';
+        $this->layout = 'login.php';
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -82,5 +82,11 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+    
+    public function actionError()
+    {
+        $this->layout ='error.php';
+        return $this->render('error');
     }
 }
