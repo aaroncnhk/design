@@ -57,6 +57,11 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+    
+    public function actionOutline()
+    {
+        return $this->render('outline');
+    }
 
     public function actionLogin()
     {
